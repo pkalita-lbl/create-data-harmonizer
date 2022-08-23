@@ -1,0 +1,15 @@
+{
+  "name": "create-data-harmonizer",
+  "version": "0.0.1",
+  "bin": {
+    "create-data-harmonizer": "./src/main.js"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "inquirer": "^9.1.0",
+    "linkml-js": "link:../linkml-runtime.js",
+    "minimist": "^1.2.6"
+  }
+}
