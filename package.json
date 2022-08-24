@@ -4,6 +4,10 @@
   "bin": {
     "create-data-harmonizer": "./src/main.js"
   },
+  "files": [
+    "src",
+    "template"
+  ],
   "license": "MIT",
   "type": "module",
   "dependencies": {
