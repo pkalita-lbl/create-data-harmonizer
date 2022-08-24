@@ -2,7 +2,7 @@
 
 import path from 'path'
 import { mkdir, readdir, copyFile, writeFile } from 'fs/promises'
-import { SchemaView } from 'linkml-js'
+import { SchemaView } from 'linkml-runtime'
 import minimist from 'minimist'
 import inquirer from 'inquirer'
 import { fileURLToPath } from 'url'

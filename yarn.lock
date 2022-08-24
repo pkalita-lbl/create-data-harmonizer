@@ -253,9 +253,15 @@ ky@^0.25.1:
   resolved "https://registry.yarnpkg.com/ky/-/ky-0.25.1.tgz#0df0bd872a9cc57e31acd5dbc1443547c881bfbc"
   integrity sha512-PjpCEWlIU7VpiMVrTwssahkYXX1by6NCT0fhTUX34F3DTinARlgMpriuroolugFPcMgpPWrOW4mTb984Qm1RXA==
 
-"linkml-js@link:../linkml-runtime.js":
-  version "0.0.0"
-  uid ""
+linkml-runtime@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/linkml-runtime/-/linkml-runtime-0.1.2.tgz#d5ffe389aabed6a84d42972705410c9c1da363df"
+  integrity sha512-u04EBgnK8jZK2fNZTbhAg0oZyb8t60xWG43PMu9ZBaB0o1Xv0gy2Esm2WHiZNTKz4NE/6+yyhtFOwBAXXtQFZA==
+  dependencies:
+    cross-fetch "^3.1.5"
+    klona "^2.0.5"
+    rdflib "^2.2.19"
+    yaml "2.1.1"
 
 lodash@^4.17.21:
   version "4.17.21"
