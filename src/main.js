@@ -95,6 +95,22 @@ async function run(schemaPath) {
     err(`Could not copy template files to ${dest}`)
   }
 
+  const schemasDir = path.join(dest, 'schemas')
+  try {
+    await mkdir(schemasDir, { recursive: true })
+  } catch {
+    err(`Could not create directory: ${schemasDir}`)
+  }
+
+  const schemaPathParsed = path.parse(schemaPath)
+  const schemaJsonFilename = schemaPathParsed.name + '.json'
+  const schemaJsonPath = path.join(schemasDir, schemaJsonFilename)
+  try {
+    await writeFile(schemaJsonPath, JSON.stringify(view.schema, null, 2))
+  } catch {
+    err(`Could not export schema to ${schemaJsonPath}`)
+  }
+
   const pkgJson = {
     name: "dh-testing-web",
     version: "0.0.0",
@@ -102,10 +118,12 @@ async function run(schemaPath) {
     scripts: {
       dev: "vite",
       build: "vite build",
-      preview: "vite preview"
+      preview: "vite preview",
+      "update-schema": `gen-linkml --format json --output schemas/${schemaJsonFilename} ${schemaPath}`
     },
     private: true,
     devDependencies: {
+      "linkml-runtime": "0.2.0",
       "vite": "3.0.4"
     },
     dependencies: {
@@ -119,21 +137,6 @@ async function run(schemaPath) {
     await writeFile(path.join(dest, 'package.json'), JSON.stringify(pkgJson, null, 2))
   } catch {
     err(`Could not write package.json to ${dest}`)
-  }
-
-  const schemasDir = path.join(dest, 'schemas')
-  try {
-    await mkdir(schemasDir, { recursive: true })
-  } catch {
-    err(`Could not create directory: ${schemasDir}`)
-  }
-
-  const schemaPathParsed = path.parse(schemaPath)
-  const schemaJsonPath = path.join(schemasDir, schemaPathParsed.name + '.json')
-  try {
-    await writeFile(schemaJsonPath, JSON.stringify(view.schema, null, 2))
-  } catch {
-    err(`Could not export schema to ${schemaJsonPath}`)
   }
 
   const menuJson = {

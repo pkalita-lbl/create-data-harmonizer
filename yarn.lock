@@ -111,6 +111,11 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==
 
+commander@^9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.4.0.tgz#bc4a40918fefe52e22450c111ecd6b7acce6f11c"
+  integrity sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==
+
 cross-fetch@^3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.5.tgz#e1389f44d9e7ba767907f7af8454787952ab534f"
@@ -253,11 +258,12 @@ ky@^0.25.1:
   resolved "https://registry.yarnpkg.com/ky/-/ky-0.25.1.tgz#0df0bd872a9cc57e31acd5dbc1443547c881bfbc"
   integrity sha512-PjpCEWlIU7VpiMVrTwssahkYXX1by6NCT0fhTUX34F3DTinARlgMpriuroolugFPcMgpPWrOW4mTb984Qm1RXA==
 
-linkml-runtime@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/linkml-runtime/-/linkml-runtime-0.1.2.tgz#d5ffe389aabed6a84d42972705410c9c1da363df"
-  integrity sha512-u04EBgnK8jZK2fNZTbhAg0oZyb8t60xWG43PMu9ZBaB0o1Xv0gy2Esm2WHiZNTKz4NE/6+yyhtFOwBAXXtQFZA==
+linkml-runtime@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/linkml-runtime/-/linkml-runtime-0.2.0.tgz#98f2a4feea9b61af3edba76ae9de3d0cd789abe8"
+  integrity sha512-wKHegCCxJI2focLmrkv+8lHPQPcy3ObMr9g0qcGMiR5jEODs1/HtKBX9ZMieS05UOkjeqKrt1crIYqm/mqPlyw==
   dependencies:
+    commander "^9.4.0"
     cross-fetch "^3.1.5"
     klona "^2.0.5"
     rdflib "^2.2.19"
