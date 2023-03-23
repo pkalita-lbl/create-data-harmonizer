@@ -128,7 +128,7 @@ async function run(schemaPath) {
     },
     dependencies: {
       bootstrap: "4.3.1",
-      "data-harmonizer": "1.3.5",
+      "data-harmonizer": "1.4.7",
       jquery: "3.5.1",
       "popper.js": "1.16.1"
     }
